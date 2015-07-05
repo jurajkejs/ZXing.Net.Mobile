@@ -12,7 +12,8 @@
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <RootNamespace>ZXing.Mobile</RootNamespace>
     <AssemblyName>ZXing.Net.Mobile</AssemblyName>
-    <TargetFrameworkVersion>v2.3</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.2</TargetFrameworkVersion>
+    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -35,8 +36,9 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
-    <Reference Include="Xamarin.Android.Support.v4">
-      <HintPath>..\Components\xamandroidsupportv4-18-20.0.0.3\lib\android\Xamarin.Android.Support.v4.dll</HintPath>
+    <Reference Include="Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Xamarin.Android.Support.v4.22.2.0.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
@@ -69,9 +71,6 @@
     <AndroidResource Include="Resources\layout\zxingscannerfragmentlayout.axml" />
   </ItemGroup>
   <ItemGroup>
-    <XamarinComponentReference Include="xamandroidsupportv4-18">
-      <Version>20.0.0.3</Version>
-      <Visible>False</Visible>
-    </XamarinComponentReference>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
